@@ -1,24 +1,3 @@
-const searchEl = document.querySelector('.sea__rch');
-const serchInputEl = searchEl.querySelector('input');
-
-
-
-// 검색바
-searchEl.addEventListener('click', function () {
-  serchInputEl.focus();
-});
-
-
-serchInputEl.addEventListener('focus', function(){
-  searchEl.classList.add('focused');
-  serchInputEl.setAttribute('placeholder', '통합검색');
-});
-
-serchInputEl.addEventListener('blur', function(){
-  searchEl.classList.remove('focused');
-  serchInputEl.setAttribute('placeholder', '');
-});
-
 
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector('#to-top');
@@ -156,6 +135,3 @@ spyEls.forEach(function (spyEl){
     .setClassToggle(spyEl,'show') // 트리거가 걸리면 실행
     .addTo(new ScrollMagic.Controller());
 });
-
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear();
